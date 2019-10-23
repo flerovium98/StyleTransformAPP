@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnSelectPhoto"
+            android:text="选择照片"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/change_container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_container"
+        >
+        <Button
+            android:id="@+id/btnPerson"
+            android:text="人像"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnView"
+            android:text="风景"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/mid_container"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_container"
+        android:layout_above="@+id/tv"
+        >
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+         />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv"
+        android:text="原图"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottom_container"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/process_btn_starry"
+            android:padding="10dp"
+            android:background="@drawable/starry_low"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/process_btn_wave"
+            android:padding="10dp"
+            android:background="@drawable/wave_low"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/process_btn_sumiao"
+            android:padding="10dp"
+            android:background="@drawable/sumiao_low"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/process_btn_feathers"
+            android:padding="10dp"
+            android:background="@drawable/feathers_low"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+ </RelativeLayout>
+    <!--注释内容
+<Button
+android:id="@+id/btnSelectPhoto"
+android:text="选择照片"
+android:layout_width="0dp"
+android:layout_weight="1"
+android:layout_height="wrap_content" />
+<Button
+android:id="@+id/btnTakePhoto"
+android:text="拍照"
+android:layout_weight="1"
+android:layout_width="0dp"
+android:layout_height="wrap_content" />
+     -->
